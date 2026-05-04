@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    background: linear-gradient(160deg, #667eea, #764ba2);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.glass {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+/* Karte */
+#map {
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* Optionen */
+.options {
+    display: grid;
+    gap: 12px;
+}
+
+.option {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.15);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.option:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.03);
+}
+
+/* Unterseiten */
+.back {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+}

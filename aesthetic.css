@@ -1,0 +1,235 @@
+/* ------------------ */
+/* Google Font (Serif) */
+/* ------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+
+/* ------------------ */
+/* Lato lokal         */
+/* ------------------ */
+@font-face {
+    font-family: "LatoCustom";
+    src: url("fonts/Lato-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+/* ------------------ */
+/* Reset              */
+/* ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------ */
+/* Base               */
+/* ------------------ */
+body {
+    background: #090a0d;
+    color: #e4e6eb;
+
+    font-family: "LatoCustom", -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 36px 20px 60px;
+}
+
+/* ------------------ */
+/* Typography         */
+/* ------------------ */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+header p {
+    font-size: 1.05rem;
+    opacity: 0.55;
+    line-height: 1.7;
+    max-width: 90%;
+}
+
+/* ------------------ */
+/* Map (Ultra clean)  */
+/* ------------------ */
+#map {
+    height: 300px;
+    margin: 28px 0 24px;
+    border-radius: 22px;
+
+    filter: grayscale(50%) brightness(100%) contrast(90%);
+}
+
+/* Leaflet komplett verstecken */
+.leaflet-control-container {
+    display: none;
+}
+
+/* Marker Punkt minimal */
+.dot {
+    width: 6px;
+    height: 6px;
+    background: #dcdfe4;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: all 0.25s ease;
+}
+
+.dot:hover {
+    transform: scale(2);
+    opacity: 1;
+}
+
+/* ------------------ */
+/* Grid               */
+/* ------------------ */
+.grid {
+    display: grid;
+    gap: 12px;
+}
+
+/* ------------------ */
+/* Cards              */
+/* ------------------ */
+.card {
+    display: block;
+    padding: 18px;
+    border-radius: 16px;
+
+    text-decoration: none;
+    color: #e4e6eb;
+
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.04);
+
+    font-size: 1.08rem;
+
+    transition: all 0.25s ease;
+}
+
+/* Hover = sehr subtil */
+.card:hover {
+    background: rgba(255,255,255,0.06);
+    transform: translateY(-1px);
+}
+
+/* Active */
+.card.active {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ------------------ */
+/* Animation (sehr weich) */
+/* ------------------ */
+.fade {
+    opacity: 0;
+    transform: translateY(6px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.fade:nth-child(1) { animation-delay: 0.05s; }
+.fade:nth-child(2) { animation-delay: 0.1s; }
+.fade:nth-child(3) { animation-delay: 0.15s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------ */
+/* Subpages           */
+/* ------------------ */
+.container {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 36px 20px;
+}
+
+.glass {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 18px;
+    padding: 22px;
+}
+
+/* Back Link */
+.back {
+    display: inline-block;
+    margin-top: 24px;
+    text-decoration: none;
+    color: #e4e6eb;
+    opacity: 0.4;
+    transition: 0.2s;
+}
+
+.back:hover {
+    opacity: 0.8;
+}
+
+/* ------------------ */
+/* Page Transition    */
+/* ------------------ */
+.fade-page {
+    animation: fadePage 0.6s ease;
+}
+
+@keyframes fadePage {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------ */
+/* Hero Image         */
+/* ------------------ */
+.hero {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter: brightness(85%) contrast(90%);
+}
+
+/* ------------------ */
+/* Text Layout        */
+/* ------------------ */
+.container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    opacity: 0.85;
+}
+
+.container p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    opacity: 0.65;
+}

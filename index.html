@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stadt erkunden</title>
+
+<link rel="stylesheet" href="aesthetic.css">
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header class="fade">
+        <h1>Die Stadt ein bisschen kennenlernen</h1>
+        <p>
+            Ohne Plan. Einfach schauen, was sich gut anfühlt.
+        </p>
+    </header>
+
+    <!-- Karte -->
+    <div id="map" class="fade"></div>
+
+    <!-- Optionen -->
+    <main class="grid">
+
+        <a href="spaziergang.html" class="card">🌇 Spaziergang</a>
+        <a href="eis.html" class="card">🍦 Eis</a>
+        <a href="buchhandlung.html" class="card">📚 Buchhandlung</a>
+        <a href="biergarten.html" class="card">🍻 Biergarten</a>
+        <a href="botanik.html" class="card">🌿 Botanik</a>
+        <a href="pinakothek.html" class="card">🖼️ Pinakothek</a>
+        <a href="plattenladen.html" class="card">🎶 Plattenladen</a>
+
+    </main>
+
+</div>
+
+<script>
+
+// Karte initialisieren
+var map = L.map('map', {
+    zoomControl: false
+}).setView([48.147, 11.575], 13);
+
+// Clean Map Tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: ''
+}).addTo(map);
+
+// Custom Emoji Icon
+function emojiIcon(emoji) {
+    return L.divIcon({
+        html: `<div style="font-size:20px;">${emoji}</div>`,
+        className: '',
+        iconSize: [30, 30],
+        iconAnchor: [15, 15]
+    });
+}
+
+// Marker
+
+L.marker([48.139797792307306, 11.57805618948899], { icon: emojiIcon("🌇") })
+    .addTo(map)
+    .bindPopup("<b>Spaziergang</b><br><a href='spaziergang.html'>öffnen</a>");
+
+L.marker([48.14624786187419, 11.59338598634905], { icon: emojiIcon("🍦") })
+    .addTo(map)
+    .bindPopup("<b>Eis</b><br><a href='eis.html'>öffnen</a>");
+
+L.marker([48.153030759195175, 11.56560156240571], { icon: emojiIcon("📚") })
+    .addTo(map)
+    .bindPopup("<b>Buchhandlung</b><br><a href='buchhandlung.html'>öffnen</a>");
+
+L.marker([48.152768275293816, 11.57644116617961], { icon: emojiIcon("🍻") })
+    .addTo(map)
+    .bindPopup("<b>Biergarten</b><br><a href='biergarten.html'>öffnen</a>");
+
+L.marker([48.16444680863229, 11.50164618483217], { icon: emojiIcon("🌿") })
+    .addTo(map)
+    .bindPopup("<b>Botanik</b><br><a href='botanik.html'>öffnen</a>");
+
+L.marker([48.14719531518435, 11.57225308496006], { icon: emojiIcon("🖼️") })
+    .addTo(map)
+    .bindPopup("<b>Pinakothek</b><br><a href='pinakothek.html'>öffnen</a>");
+
+L.marker([48.148511295511035, 11.574463429152498], { icon: emojiIcon("🎶") })
+    .addTo(map)
+    .bindPopup("<b>Plattenladen</b><br><a href='plattenladen.html'>öffnen</a>");
+
+</script>
+</body>
+</html>
