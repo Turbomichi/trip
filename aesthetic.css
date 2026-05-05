@@ -233,3 +233,22 @@ header p {
     line-height: 1.7;
     opacity: 0.65;
 }
+
+.external-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #e6e8eb;
+    text-decoration: none;
+    opacity: 0.7;
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 2px;
+
+    transition: 0.2s ease;
+}
+
+.external-link:hover {
+    opacity: 1;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
