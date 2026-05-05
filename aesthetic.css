@@ -65,7 +65,7 @@ header p {
     margin: 28px 0 24px;
     border-radius: 22px;
 
-    filter: grayscale(50%) brightness(100%) contrast(90%);
+    filter: grayscale(10%) brightness(100%) contrast(150%);
 }
 
 /* Leaflet komplett verstecken */
